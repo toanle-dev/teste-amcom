@@ -1,0 +1,21 @@
+<article class="border max-w-md rounded-sm shadow-sm p-5 px-6 bg-white">
+  <!-- Cabeçalho (Título do Card) -->
+  <header class="mb-5">
+    <ng-content select="[card-title]"></ng-content>
+  </header>
+
+  <!-- Corpo do Card -->
+  <section class="grid gap-6">
+    <ng-content></ng-content>
+  </section>
+
+  <!-- Rodapé do Card -->
+
+  <footer
+    #footer
+    class="text-sm mt-6 h-9 items-center flex"
+    [ngClass]="{ hidden: !hasFooter() }"
+  >
+    <ng-content select="[card-footer]"></ng-content>
+  </footer>
+</article>

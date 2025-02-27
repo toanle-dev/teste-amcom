@@ -1,0 +1,50 @@
+<div class="flex">
+  <app-sidebar [links]="links()"></app-sidebar>
+
+  <div class="w-full h-screen flex flex-col">
+    <div class="grid grid-rows-[auto_1fr_auto] h-screen">
+      <!-- Header -->
+      <header class="w-full h-20">
+        <div class="grid grid-cols-2">
+          <div class="px-8 flex flex-col justify-center">
+            <h1 class="text-2xl font-bold text-gray-950 truncate">
+              NOVA ADMISSÃO COOPERADO
+            </h1>
+
+            <p class="text-xs font-normal text-gray-500 truncate">
+              Cadastro / Admissão do Cooperado / Nova Admissão de Cooperado
+            </p>
+          </div>
+
+          <div class="flex h-20 px-5 gap-3 items-center justify-self-end">
+            <a class="cursor-pointer relative inline-flex text-primary-base">
+              <app-icon icon="bell"></app-icon>
+
+              <div
+                class="absolute inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white bg-red-500 rounded-full -top-0 -end-0"
+              >
+                20
+              </div>
+            </a>
+
+            <div>
+              <a
+                class="cursor-pointer bg-white text-primary-base shadow font-semibold px-3 py-0.5 text-base rounded-full border border-primary-base inline-flex items-center justify-center"
+                >VIACREDI</a
+              >
+            </div>
+            <img
+              class="cursor-pointer w-11 h-11 rounded-full border-2 border-primary-base"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3RFDZM21teuCMFYx_AROjt-AzUwDBROFww&s"
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="overflow-auto bg-background">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+</div>

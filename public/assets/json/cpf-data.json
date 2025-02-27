@@ -1,0 +1,37 @@
+[
+  {
+    "cpf": "12345678909",
+    "nome": "Carlos Eduardo da Silva",
+    "situacao_cpf": "Regular",
+    "conta_aplicacao": "456789-1",
+    "conta_corrente": "123456-7"
+  },
+  {
+    "cpf": "98765432100",
+    "nome": "Mariana Oliveira Souza",
+    "situacao_cpf": "Pendente de Regularização",
+    "conta_aplicacao": "987654-3",
+    "conta_corrente": "765432-1"
+  },
+  {
+    "cpf": "32165498700",
+    "nome": "Rafael Santos Pereira",
+    "situacao_cpf": "Suspenso",
+    "conta_aplicacao": "321987-5",
+    "conta_corrente": "987321-2"
+  },
+  {
+    "cpf": "74185296300",
+    "nome": "Ana Beatriz Lima",
+    "situacao_cpf": "Cancelado",
+    "conta_aplicacao": "741852-8",
+    "conta_corrente": "852963-4"
+  },
+  {
+    "cpf": "15975348600",
+    "nome": "Fernando Mendes Rocha",
+    "situacao_cpf": "Regular",
+    "conta_aplicacao": "159753-2",
+    "conta_corrente": "753486-9"
+  }
+]

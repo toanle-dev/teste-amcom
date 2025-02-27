@@ -1,0 +1,28 @@
+<div class="flex items mb-10">
+  <div class="flex mx-auto">
+    @for (item of items(); track $index) {
+    <div class="grid w-full">
+      <div class="flex items-center">
+        <div
+          class="z-10 flex items-center justify-center w-4 h-4 bg-gray-300 rounded-full ring-white shrink-0"
+          [ngClass]="{
+            'ring-2 !ring-primary-base ': item.active,
+            '!bg-primary-base': item.visited
+          }"
+        >
+          <p
+            class="text-sm text-center text-gray-400 pt-14 whitespace-nowrap"
+            [ngClass]="{ '!text-primary-base': item.active || item.visited }"
+          >
+            {{ item.label }}
+          </p>
+        </div>
+        @if ($index !== items().length - 1) {
+
+        <div class="hidden min-w-36 sm:flex w-full bg-gray-300 h-0.5"></div>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</div>

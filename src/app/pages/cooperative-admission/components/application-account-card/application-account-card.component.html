@@ -1,0 +1,17 @@
+<app-card>
+  <div card-title>
+    <h2 class="font-bold">Conta Aplicação</h2>
+    <p class="text-xs text-gray-400">Cooperativa Viacredi</p>
+  </div>
+
+  <div class="grid gap-6">
+    <div class="flex gap-3 items-center">
+      <app-icon icon="profile"></app-icon>
+      <app-text label="Número da conta">{{ cpf()?.conta_aplicacao }}</app-text>
+    </div>
+  </div>
+
+  <div card-footer>
+    <app-link>Duplicar conta</app-link>
+  </div>
+</app-card>

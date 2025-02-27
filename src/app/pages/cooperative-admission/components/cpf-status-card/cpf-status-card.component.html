@@ -1,0 +1,15 @@
+<app-card>
+  <div card-title>
+    <h2 class="font-bold">Situação cadastral do CPF</h2>
+    <p class="text-xs text-gray-400">Consulta na Receita Federal</p>
+  </div>
+
+  <div class="flex gap-3 items-center">
+    <app-icon icon="profile"></app-icon>
+    <app-text label="Nome">{{ cpf()?.nome }}</app-text>
+  </div>
+  <div class="flex gap-3 items-center">
+    <app-icon icon="check" class="text-success"></app-icon>
+    <app-text label="Situação do CPF">{{ cpf()?.situacao_cpf }}</app-text>
+  </div>
+</app-card>

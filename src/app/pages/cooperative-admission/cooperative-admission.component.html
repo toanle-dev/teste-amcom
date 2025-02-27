@@ -1,0 +1,66 @@
+<div class="h-full w-full grid grid-rows-[1fr_auto]">
+  <main class="px-8">
+    <div class="w-full pt-7">
+      <app-timeline [items]="timeline()"></app-timeline>
+    </div>
+
+    <!-- Consultar CPF -->
+    <section>
+      <h2 class="mb-2 text-xl text-gray-950">
+        Informe o CPF do futuro cooperado(a)
+      </h2>
+      <p class="text-sm font-light text-gray-700">
+        Se necessário, você poderá duplicar uma conta existente ou pausar e
+        rtornar este cadastro futuramente.
+      </p>
+
+      <p class="text-sm font-light text-gray-700">
+        Digite apenas os números(sem pontos out traços).
+      </p>
+
+      <form
+        class="flex items-end gap-2 mt-4"
+        [formGroup]="cpfForm"
+        (ngSubmit)="searchCPF()"
+      >
+        <app-input
+          label="CPF"
+          formControlName="cpf"
+          mask="000.000.000-00"
+          [error]="error()"
+          placeholder="Digite seu CPF"
+        ></app-input>
+        <app-button [isLoad]="loadingCpf()" type="submit"
+          >Consultar por CPF</app-button
+        >
+      </form>
+    </section>
+
+    <!-- Dados do CPF -->
+    @if (cpf()) {
+    <section class="flex gap-4 mt-5">
+      <app-cpf-status-card
+        [cpf]="cpf()!"
+        class="w-72 flex-none animate-fade-right"
+      ></app-cpf-status-card>
+
+      <app-application-account-card
+        [cpf]="cpf()!"
+        class="w-72 flex-none animate-fade-right"
+      ></app-application-account-card>
+      <app-checking-account-card
+        [cpf]="cpf()!"
+        class="w-72 flex-none animate-fade-right"
+      ></app-checking-account-card>
+    </section>
+    }
+  </main>
+
+  <footer class="h-20 px-8 bg-white flex items-center gap-3">
+    @if (cpf()) {
+    <app-button class="animate-fade"> Iniciar nova admissão</app-button>
+
+    }
+    <app-button [outline]="true"> Dicas para admissão</app-button>
+  </footer>
+</div>

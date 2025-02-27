@@ -1,0 +1,14 @@
+<aside class="w-24 bg-primary-base text-white flex flex-col min-h-screen">
+  <div class="p-4 text-xl font-bold h-28">
+    <img class="w-full h-full" src="./assets/logo/logo-ailos.svg" alt="" />
+  </div>
+  <nav class="flex-1">
+    <section class="grid justify-center gap-5">
+      @for (link of links(); track $index) {
+      <div class="cursor-pointer">
+        <app-icon [icon]="link.icon"></app-icon>
+      </div>
+      }
+    </section>
+  </nav>
+</aside>
